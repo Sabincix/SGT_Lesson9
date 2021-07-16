@@ -48,5 +48,77 @@ public class SGT_Lesson9 {
 //            System.out.println("Infinite loop" + i );
 //        }
 
+        for (int i = 45; i < 55 ; i++) {
+            System.out.println("This is the end of the loop " + i);
+        }
+
+        for (int i = 53; i > -47 ; i--) {
+            System.out.println("This loop is: " + i);
+        }
+
+        int counter = 0;
+        for (int i = 59; i < 1005 ;  i++) {
+            System.out.println("This is iteration # " + counter);
+            counter++;
+        }
+
+        counter = 0;
+        for (int  currentTime = 8; currentTime < 12; currentTime++) {
+            System.out.println("BOM BOM! It is " + currentTime + " o'clock");
+            System.out.println("This is the " + counter+ " tome the clock alarmed");
+            counter = counter + 1;
+        }
+
+        // ARRAYS + LOOPS
+
+        int[] grades = {8, 9, 10, 8, 9, 7, 6, 8, 9, 6, 10, 9, 8, 6};
+
+        int gradeSum = 0;
+        for (int i = 0; i < 14 ; i++) {
+            gradeSum += grades[i];   // += the same as gradeSum = gradeSum + grades[i];
+        }
+        System.out.println("Sum of all the grades is "+ gradeSum);
+
+        double averageGrade = gradeSum / 14d;
+        System.out.println("The average grade is: " + averageGrade);
+
+
+
+// Simplified using grades1.length if another grade is added
+        int[] grades1 = {8, 9, 10, 8, 9, 7, 6, 8, 9, 6, 10, 9, 8, 6};
+
+        int gradeSum1 = 0;
+        for (int i = 0; i < grades1.length ; i++) {
+            gradeSum1 += grades1[i];   // += the same as gradeSum = gradeSum + grades[i];
+        }
+        System.out.println("Sum of all the grades is "+ gradeSum1);
+
+        double averageGrade1 = gradeSum1 / (double)grades1.length;
+        System.out.println("The average grade is: " + averageGrade1);
+
+
+        //Messages
+        boolean[] arrayOfBooleans= {true, false, true, false};
+
+        String[] arrayOfStrings = {"Message 1","Message 2", "Message 3" };
+        double monthlySalary[] = { 1000d, 1100d, 1200d, 1300d, 1400d};
+
+        //Covid tests array
+        boolean[] covidTests = { false, false, false, false };
+
+        //Students array
+        String[] students = {"Artjoms","Laura", "Tatjana", "Marta"};
+
+        //Circle K coffee, every 7th coffee is free.
+        for (int i = 0; i < 10000 ; i++) {
+            // ja 7/7 =1, atlikums ir 0. Ja atlikums ir 0, tad kafija ir par brīvu
+            if( i% 7 == 0 ) {
+                System.out.println("This coffee is for free!");
+            } else {
+                System.out.println("You need to pay for this cup of coffee #" +i);
+            }
+        }
+
+
     }
 }
